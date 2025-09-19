@@ -1,0 +1,9 @@
+Household{id='a', name='a', address='a', joinDate=2025-09-19, events=[Date: 2025-09-19
+Material Type: a
+Weight: 2.0
+Ecopoints: 20.0], totalPoints=20.0}
+Date: 2025-09-19
+Material Type: a
+Weight: 2.0
+Ecopoints: 20.0
+---------------------------------------------
