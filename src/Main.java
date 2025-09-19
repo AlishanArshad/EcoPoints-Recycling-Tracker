@@ -24,6 +24,13 @@ private static Scanner scanner = new Scanner(System.in);
             RecyclingEvent recyclingEvent = new RecyclingEvent(materialType, weight);
             household.addEvent(recyclingEvent);
 
+            System.out.println("Press 'ENTER' to continue or 'No' to Stop : ");
+            String choice = scanner.nextLine();
+            if(choice.equalsIgnoreCase("no")) {
+                System.out.println("BYEE....");
+                break;
+            }
+
             try {
                 FileWriter writer = new FileWriter("EcoPoints.txt", true);
                 BufferedWriter bufferedWriter = new BufferedWriter(writer);
@@ -33,14 +40,16 @@ private static Scanner scanner = new Scanner(System.in);
                 bufferedWriter.newLine();
                 bufferedWriter.write("---------------------------------------------");
                 bufferedWriter.close();
-                System.out.println("File written");
+                System.out.println("File written for "+ name);
                 System.out.println("---------------------------------------------------");
 
 
             }catch (IOException e){
                 System.out.println("Unable to Write " + e.getMessage());
-            }
 
+            }
         }
+        scanner.close();
     }
 }
+
